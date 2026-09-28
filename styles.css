@@ -1,0 +1,148 @@
+:root{
+    --color-bg1: hsl(233, 47%, 7%);
+    --color1: hsl(244, 37%, 16%);
+    --color2: hsl(277, 64%, 61%);
+    --color-main-heading: hsl(0, 0%, 100%);
+    --color-main-paragraph: hsla(0, 0%, 100%, 0.75);
+    --color-stat-headings: hsla(0, 0%, 100%, 0.6);
+}
+
+* { 
+    margin: 0;
+    padding: 0;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+/* Mobile Samsung S25*/
+
+body{
+    background-color: var(--color-bg1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem auto;
+    width: 17.5rem;
+    min-height: 43.75rem;
+    background-color: var(--color1);
+    border-radius: 5px;
+}
+
+h1{
+    display: block;
+    color: var(--color-main-heading);
+    font-family: 'Inter', sans-serif;
+    font-size: 1.7rem;
+    text-align: center;
+    margin-top: 1.3rem;
+    padding: 0rem 1rem;
+}
+
+.color{
+    color: var(--color2);
+}
+
+p{
+    color: var(--color-main-paragraph);
+    text-align: center;
+    padding: 1.3rem;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 0.88rem;
+    line-height: 1.2;
+}
+
+img{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width: 100%;
+}
+
+.statistics{
+    display: flex;
+    flex-direction: column;
+}
+
+.flexcontainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.stats{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.numbers{
+    color: var(--color-main-heading);
+    margin-top: 1.4rem;
+    font-family: 'Lexend Deca', Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.themes{
+    color: var(--color-stat-headings);
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    font-family: 'Inter';
+    padding-top: 0.7em;
+}
+
+/* For desktop de 1440 width */
+
+@media screen and (min-width: 90rem) {
+   .container{
+        margin-top: 10em;
+        display: flex;
+        flex-direction: row-reverse;
+        width: 50rem;
+        min-height: 21.875rem;
+    }
+
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-top-left-radius: 0;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+    .flexcontainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 1.5em;
+        margin-bottom: 0;
+    }
+
+    h1{
+        margin-top: 1.5em;
+        margin-bottom: 0;
+    }
+
+    p{
+        padding: 1.3rem;
+        margin: 1.5em 3em;
+    }
+
+    .numbers{
+        margin-top: 0;
+    }
+}
+
+
+
